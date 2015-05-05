@@ -5,7 +5,7 @@ import unittest
 
 class Crowdmap(object):
  	def get_all_posts_for(self,param):
- 		pass
+ 		return ["Or"]
 
 class FindAPersonTestes(unittest.TestCase):
 	def setUp(self):
@@ -13,7 +13,7 @@ class FindAPersonTestes(unittest.TestCase):
 
  	def test_getAllPostsForName(self):
  		posts=self.crowdmap.get_all_posts_for("Or")
- 		self.assertFalse("Or",posts)
+ 		self.assertIn("Or",posts)
 
 
 
