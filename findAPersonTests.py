@@ -19,5 +19,10 @@ class FindAPersonTestes(unittest.TestCase):
  		self.assertEquals( [],posts)
 
 
+ 	def test_existingLocationInformationReturnsTrue(self):
+ 		location_Exist=self.crowdmap.is_location_for_name("Or")
+ 		self.AssertTrue(location_Exist)
+
+
 if __name__ == '__main__':
 	unittest.main();
