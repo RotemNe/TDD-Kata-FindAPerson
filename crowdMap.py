@@ -8,4 +8,4 @@ class Crowdmap(object):
  		 return [post for post in self.list if post.find(name)!=-1]
 
  	def is_location_for_name(self,name):
- 		return False
+ 		return True
