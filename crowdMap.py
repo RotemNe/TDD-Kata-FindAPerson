@@ -16,3 +16,10 @@ class Crowdmap(object):
  				if location in post:
  					return True
  		return False
+
+ 	def mapInconsistenciesExist(self,name):
+ 		locations=[]
+ 		appearnces =0
+ 		if appearnces >1:
+ 			return True
+ 		return False

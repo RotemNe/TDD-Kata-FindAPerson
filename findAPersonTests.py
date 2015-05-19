@@ -18,7 +18,6 @@ class FindAPersonTestes(unittest.TestCase):
  		posts=self.crowdmap.get_all_posts_for("Joe")
  		self.assertEquals( [],posts)
 
-
  	def test_existingLocationInformationReturnsTrue(self):
  		location_Exist=self.crowdmap.is_location_for_name("Or")
  		self.assertTrue(location_Exist)
@@ -27,8 +26,13 @@ class FindAPersonTestes(unittest.TestCase):
  		location_exist=self.crowdmap.is_location_for_name("Lassy")
  		self.assertFalse(location_exist)
 
+ 	def test_mapInconsistenciesExistReturnsTrue(self):
+ 		mapInconsiste=self.crowdmap.mapInconsistenciesExist("Or")
+ 		self.assertTrue(mapInconsiste)
 
-
+ 	def test_mapInconsistenciesExistReturnsFalse(self):
+ 		mapInconsiste=self.crowdmap.mapInconsistenciesExist("Lassy")
+ 		self.assertFalse(mapInconsiste)
 
 if __name__ == '__main__':
 	unittest.main();
