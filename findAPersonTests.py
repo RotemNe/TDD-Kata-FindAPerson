@@ -23,9 +23,9 @@ class FindAPersonTestes(unittest.TestCase):
  		location_Exist=self.crowdmap.is_location_for_name("Or")
  		self.assertTrue(location_Exist)
 
- 	def test_non_existingLocationInformationReturnsTrue(self):
- 		location_Exist=self.crowdmap.is_location_for_name("Lassy")
- 		self.assertFalse(location_Exist)
+ 	def test_missingLocationInformationReturnsFalse(self):
+ 		location_exist=self.crowdmap.is_location_for_name("Lassy")
+ 		self.assertFalse(location_exist)
 
 
 
