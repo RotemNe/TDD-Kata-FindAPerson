@@ -1,7 +1,7 @@
 
 class locationService():
 	def __init__(self):
-		self.locations=['Bankok','Israel','Langtang valley']
-		
+		self.locations=['Bangkok','Israel','Langtang valley']
+
 	def getLocations(self):
 		return self.locations

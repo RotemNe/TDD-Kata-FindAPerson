@@ -18,8 +18,14 @@ class Crowdmap(object):
  		return False
 
  	def mapInconsistenciesExist(self,name):
- 		locations=[]
+ 		postList= self.get_all_posts_for(name)
+ 		locationsList = locationService().getLocations()
  		appearnces =0
+ 		for post in postList:
+ 			for location in locationsList:
+ 				if location in post:
+ 					appearnces+=1
+
  		if appearnces >1:
  			return True
  		return False
